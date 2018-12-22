@@ -47,7 +47,7 @@ var customSearch;
 	}
 
 	function setHeaderMenu() {
-    var $headerMenu = $('header .menu');
+		var $headerMenu = $('header .menu');
     // 先把已经激活的取消激活
     $headerMenu.find('li a.active').removeClass('active');
 		// var $underline = $headerMenu.find('.underline');
@@ -242,5 +242,19 @@ var customSearch;
 		}
 
 	});
-
+  $(document).pjax('a', '#pjax-container', {
+      fragment: '#pjax-container',
+      timeout: 5000
+  });
+  $(document).on('ready pjax:end', function(event) {
+    console.log("ready pjax:end", event);
+    // $(event.target).initializeMyPlugin()
+    setHeader();
+		setHeaderMenu();
+		setHeaderMenuPhone();
+		setHeaderSearch();
+		setWaves();
+		setScrollReveal();
+		setTocToggle();
+  });
 })(jQuery);
