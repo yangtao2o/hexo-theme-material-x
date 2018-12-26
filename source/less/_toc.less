@@ -1,20 +1,19 @@
 .l_side .toc-wrapper{
     z-index: 1;
-    overflow: auto;
+    overflow: hidden;
     border-radius: @border_radius;
     position: sticky;
     top: @height_navbar + 1*@gap;
-    // bottom: @gap;
-    // max-height: ~"calc(100% - 2 * @{gap} - @{height_navbar})";
-    // max-height: 600px;
     .enable-trans();
-    .header{
+    header{
         position: sticky;
         width: 100%;
         top: 0;
     }
     .content{
         padding: @gap/2 0;
+        max-height: 500px;
+        overflow: auto;
         &.pure{
           padding-top: 0; // 适合白色导航栏背景
         }
@@ -37,24 +36,29 @@
     &.active{
         position: fixed;
         box-shadow: @boxshadow_card_raised;
-        .header{
+        header{
             .s-toc{
               transform: rotate(30deg);
             }
         }
     }
-
+    .enable-trans();
     @media(max-width: @on_phone){
         position: fixed;
-        width: ~"calc(100% - 2 * @{gap})";
+        max-height: 1000px;
+        // width: ~"calc(100% - 2 * @{gap})";
         top: @height_navbar;
-        left: @gap;
         box-shadow: @boxshadow_card_raised;
-        display: none;
-        &.active{
-            display: block;
+        visibility: hidden;
+        .rightBtn{
+          display: none;
         }
-
+        transform: scale(0,0);
+        transform-origin: right top;
+        &.active{
+            visibility: visible;
+            transform: scale(1,1);
+        }
     }
 
     a {
@@ -96,6 +100,7 @@
 
             }
             width: auto;
+            text-align: left;
             // &:extend(.txt-ellipsis);
         }
     }
