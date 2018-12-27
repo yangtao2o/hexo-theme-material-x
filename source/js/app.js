@@ -236,19 +236,5 @@ var customSearch;
 		}
 
 	});
-  $(document).pjax('a', '#pjax-container', {
-      fragment: '#pjax-container',
-      timeout: 5000
-  });
-  $(document).on('ready pjax:end', function(event) {
-    console.log("ready pjax:end", event);
-    // $(event.target).initializeMyPlugin()
-    // setHeader();
-		setHeaderMenu();
-		// setHeaderMenuPhone();
-		// setHeaderSearch();
-		// setWaves();
-		// setScrollReveal();
-		// setTocToggle();
-  });
+  
 })(jQuery);

@@ -237,6 +237,62 @@
   <% } else { %>
     <%- js(['js/app.js', 'js/search.js']) %>
   <% } %>
+  <% if (theme.services.pjax == true) { %>
+    <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+    <script type="text/javascript">
+      function setHeaderMenu() {
+    		var $headerMenu = $('header .menu');
+        // 先把已经激活的取消激活
+        $headerMenu.find('li a.active').removeClass('active');
+    		// var $underline = $headerMenu.find('.underline');
+    		function setUnderline($item) {
+    			// if (!transition) $underline.addClass('disable-trans');
+    			if ($item && $item.length) {
+    				$item.addClass('active').siblings().removeClass('active');
+    			}
+    		}
+    		//set current active nav
+    		var $active_link = null;
+        var idname = location.pathname.replace(/\/|%/g, "");
+        if (idname.length == 0) {
+          idname = "home";
+        }
+    		var page = idname.match(/page\d{0,}$/g);
+    		if (page) {
+    			page = page[0];
+    			idname = idname.split(page)[0];
+    		}
+        var index = idname.match(/index.html/);
+        if (index) {
+          index = index[0];
+          idname = idname.split(index)[0];
+        }
+        $active_link = $('#' + idname, $headerMenu);
+        setUnderline($active_link);
+    	}
+      $(document).pjax('a', '#pjax-container', {
+          fragment: '#pjax-container',
+          timeout: 5000
+      });
+      $(document).on('ready pjax:end', function(event) {
+        console.log("ready pjax:end", event);
+        valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          guest_info: guest_info,
+          appId: "<%= config.valine.app_id %>",
+          appKey: "<%= config.valine.app_key %>",
+          placeholder: "<%= config.valine.placeholder %>",
+          pageSize:'<%= config.valine.pageSize %>',
+          avatar:'<%= config.valine.avatar %>',
+          lang:'<%= config.valine.lang %>',
+          highlight:'<%= config.valine.highlight %>'
+        });
+    		setHeaderMenu();
+      });
+    </script>
+  <% } %>
 <% } %>
 
 <% if (config.import && config.import.js && config.import.js.length > 0) { %>
