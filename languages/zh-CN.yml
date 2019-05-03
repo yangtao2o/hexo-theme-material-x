@@ -1,20 +1,18 @@
-pagetitle:
-  category: 分类
-  tagcloud: 标签
 sidebar:
-  category: 所有分类
+  category: 文章分类
   tagcloud: 热门标签
-  toc: 文章目录
+  toc: 本文目录
+  related_posts: 相关文章
 post:
   top: 置顶
   read_more: 阅读全文
   sticky: 置顶
   comments: 评论
-  comments_placeholder: 无法加载评论系统，请确保您的网络能够正常访问
-  related_posts: 相关文章
+  comments_placeholder: 无法加载%s评论系统，请确保您的网络能够正常访问。
   copy_button: 复制
   copy_success: 复制成功
   copy_failure: 复制失败
+  updated: 最后更新于
   prev_page: 上一页
   next_page: 下一页
   copyright:

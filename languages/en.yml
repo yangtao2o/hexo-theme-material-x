@@ -1,20 +1,18 @@
-pagetitle:
-  category: Category
-  tagcloud: Tag
 sidebar:
   category: Categories
   tagcloud: Hot Tags
-  toc: Table of Contents
+  toc: TOC
+  related_posts: Related Posts
 post:
   top: Top
   read_more: Read More
   sticky: Sticky
   comments: Comments
-  comments_placeholder: Unable to load comment system, please make sure your network can access
-  related_posts: Related Posts
+  comments_placeholder: Unable to load %s, please make sure your network can access.
   copy_button: Copy
   copy_success: Copied
   copy_failure: Copy failed
+  updated: last updated at
   prev_page: Previous
   next_page: Next
   copyright:

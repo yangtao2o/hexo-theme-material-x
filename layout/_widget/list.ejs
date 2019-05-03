@@ -1,9 +1,16 @@
-<section class='<%- item.widget %>'>
+<section class='widget <%- item.widget %>'>
   <%- partial('header', {item: item, defIcon: '', defTitle: ''}) %>
   <div class='content <%= theme.style %>'>
     <ul class="entry">
       <% (item.rows||[]).forEach(function(row){ %>
-        <li><a class="flat-box" title="<%- row.url %>" href="<%= url_for(row.url) %>">
+        <li><a class="flat-box" title="<%- url_for(row.url) %>" href="<%- url_for(row.url) %>"
+          <% if (row.rel) { %>
+            rel="<%- row.rel %>"
+          <% } %>
+          <% if (row.target) { %>
+            target="<%- row.target %>"
+          <% } %>
+          >
           <div class='name'>
             <% if(row.img) { %>
               <img src="<%- row.img %>">
