@@ -8,7 +8,9 @@
 
 ## 示例
 
-[![](https://img.shields.io/badge/我的个人博客-https://xaoxuu.com/blog/-green.svg?colorA=888&colorB=52A1F8&longCache=true&style=popout-square)](https://xaoxuu.com/blog/)
+[![](https://img.shields.io/badge/我的暗黑风格博客-https://istaotao.com-green.svg?colorA=888&colorB=52A1F8&longCache=true&style=popout-square)](https://istaotao.com)
+
+[![](https://img.shields.io/badge/作者的个人博客-https://xaoxuu.com/blog/-green.svg?colorA=888&colorB=52A1F8&longCache=true&style=popout-square)](https://xaoxuu.com/blog/)
 
 [![](https://img.shields.io/badge/一个开源的示例博客-https://mxclub.github.io/example/-green.svg?colorA=888&colorB=52A1F8&longCache=true&style=popout-square)](https://mxclub.github.io/example/)
 
