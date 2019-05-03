@@ -349,9 +349,13 @@
         padding-top: @gap/4; // 适合白色导航栏背景
       }
       .aplayer{
+        background: inherit;
         border-radius: 4px;
         color: #666;
         font-family: @fontfamily_base;
+        .aplayer-list ol li {
+          border: none;
+        }
       }
     }
   }
