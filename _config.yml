@@ -38,38 +38,38 @@ music:
   autoplay: false   # 自动播放
 
 # 友链页头像占位图
-avatar_placeholder: https://istaotao.com/img/me-lg.jpg
+avatar_placeholder: https://ae01.alicdn.com/kf/H77cd89dcc6ad420297a555d36891af53B.jpg
 
 # 日期格式 http://momentjs.com/docs/
 date_format: 'YYYY-MM-DD' # 文章发布日期的格式
 updated_date_format: 'll' # 文章更新日期的格式
 
 # 幻灯片
-backstretch:
-  position: cover  # cover: 封面背景   full: 整个网页背景
-  duration: 6000 # 持续时间（毫秒）
-  fade: 1500     # 渐变（毫秒）
-  images:
-    # - https://img.vim-cn.com/f6/78aed21213230b9220f310f9ea6c822b011846.jpg
-    # - https://img.vim-cn.com/d5/b004c81a13aea401375d03b1258ecadbfcbaa7.jpg
-    # - https://img.vim-cn.com/4c/8e7294998989454b2dcd2624373d5a699c4414.jpg
-    - /img/home-bg-o.jpg
-    - /img/home-bg.jpg
+# backstretch:
+#   position: cover  # cover: 封面背景   full: 整个网页背景
+#   duration: 6000 # 持续时间（毫秒）
+#   fade: 1500     # 渐变（毫秒）
+#   images:
+#     - https://ae01.alicdn.com/kf/H30168306248e4502b60746e5ab068093r.jpg
+#     - https://ae01.alicdn.com/kf/H55cdc1efb6fb4029857350e2ac6ee720O.jpg
 
 
 ############################### 自定义 ###############################
 # page的封面
 cover:
   scheme: search    # 后期将会提供多种封面方案
-  # height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
+  height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
   title: "大涛子客栈"
   # logo: assets/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
-  search_placeholder: '前端、摄影、羽毛球、电影、音乐、脱发'
+  search_placeholder: '前端、摄影、羽毛球、电影、脱发'
   # 主页封面菜单
   features:
     - name: 博文
       icon: fas fa-rss
       url: /
+    - name: Vue主页
+      icon: fas fa-home
+      url: https://istaotao.com/home/
     # - name: 项目
     #   icon: fas fa-code-branch
     #   url: projects/
@@ -151,7 +151,7 @@ body: [article, comments]
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
   - widget: author
-    avatar: /img/me-lg.jpg
+    avatar: https://ae01.alicdn.com/kf/H27ad119e1e8e46e298439050add9a89eB.jpg
     jinrishici: 天涯若比邻
     social: true
   - widget: toc
@@ -189,17 +189,17 @@ sidebar:
         icon: fas fa-info-circle
         url: about/
         rel: nofollow
-  - widget: category
-    more:
-      icon: fas fa-expand-arrows-alt
-      url: categories/
-      rel: nofollow
-  - widget: tagcloud
-    icon: fas fa-fire
-    more:
-      icon: fas fa-expand-arrows-alt
-      url: tags/
-      rel: nofollow
+  # - widget: category
+  #   more:
+  #     icon: fas fa-expand-arrows-alt
+  #     url: categories/
+  #     rel: nofollow
+  # - widget: tagcloud
+  #   icon: fas fa-fire
+  #   more:
+  #     icon: fas fa-expand-arrows-alt
+  #     url: tags/
+  #     rel: nofollow
   # - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
   - widget: music
     icon: fas fa-compact-disc
@@ -219,7 +219,7 @@ social:
   # - icon: fas fa-rss
   #   url: atom.xml
   - icon: fab fa-weixin
-    url: /img/wx.png
+    url: https://ae01.alicdn.com/kf/Hd6aab0894803450395b643181cafabc9J.jpg
   - icon: fas fa-envelope
     url: mailto:istaotao@aliyun.com
   - icon: fab fa-github
@@ -280,7 +280,7 @@ valine:
   #   app_id: 你的appId
   #   app_key: 你的appKey
   guest_info: nick,mail,link #valine comment header info
-  placeholder: 你不想说些什么麽~ # valine comment input placeholder(like: Please leave your footprints )
+  placeholder: 请留下你的足迹吧~ # valine comment input placeholder(like: Please leave your footprints )
   avatar: monsterid # gravatar style https://valine.js.org/avatar
   pageSize: 10 # comment list page size
   verify: false # valine verify code (true/false)
