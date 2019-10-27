@@ -1,4 +1,4 @@
-<div class='l_main<%- page.sidebar == false ? ' no_sidebar' : '' %>'>
+<div class='l_main no_sidebar'>
   <article id="<%= page.layout %>" class="post white-box article-type-<%= page.layout %>" itemscope itemprop="blogPost">
     <%- partial('_partial/meta',{post:page, position:'header'}) %>
       <section class="article typo l_friends">
@@ -46,5 +46,4 @@
   <%- partial('_third-party/comments') %>
 
 </div>
-<%- partial('_partial/side') %>
 <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

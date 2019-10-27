@@ -1,5 +1,5 @@
 <% page.comments = false; %>
-<div class='l_main'>
+<div class='l_main no_sidebar'>
   <% if (site.posts && site.posts.length > 0) { %>
     <% if (page.layout == 'tag') { %>
       <section class="post-list">
@@ -35,5 +35,4 @@
     <% } %>
   <% } %>
 </div>
-<%- partial('_partial/side') %>
 <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

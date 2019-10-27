@@ -67,6 +67,9 @@ cover:
     - name: 博文
       icon: fas fa-rss
       url: /
+    - name: 分类
+      icon: fas fa-folder-open
+      url: categories/
     - name: Vue主页
       icon: fas fa-home
       url: https://istaotao.com/home/
