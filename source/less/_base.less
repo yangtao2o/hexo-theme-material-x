@@ -148,13 +148,14 @@ fancybox{
 
     }
     &.half{
-      height: ~"calc(50vh - @{gap} - @{height_navbar})";
+      height: ~"calc(38vh - @{gap} - @{height_navbar})";
+      min-height: 140px;
       .title, .logo{
         margin-top: ~"calc(15vh - 4*@{gap})";
       }
       @media(max-width: @on_phone){
         .title, .logo{
-          margin-top: ~"calc(32vh - 6*@{gap})";
+          margin-top: ~"calc(20vh - 6*@{gap})";
         }
       }
       .m_search{
@@ -165,7 +166,7 @@ fancybox{
       color: @theme_main;
     }
     .menu{
-      margin-top: 4vh;
+      margin-top: 2vh;
       ul {
         display: flex;
         flex-wrap: wrap;

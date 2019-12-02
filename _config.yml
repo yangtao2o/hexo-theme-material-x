@@ -65,24 +65,27 @@ cover:
   # 主页封面菜单
   features:
     - name: 博文
-      icon: fas fa-rss
+      icon: fas fa-home
       url: /
     - name: 分类
       icon: fas fa-folder-open
       url: categories/
-    - name: Vue主页
-      icon: fas fa-home
-      url: https://istaotao.com/home/
+    - name: 归档
+      icon: fas fa-archive
+      url: archives/
+    - name: Vuepress
+      icon: fas fa-rss
+      url: ./vuepress/
     # - name: 项目
     #   icon: fas fa-code-branch
     #   url: projects/
-    - name: 友链
-      icon: fas fa-link
-      url: friends/
-      rel: nofollow
     - name: 摄影
       icon: fas fa-camera-retro
       url: http://dataoboy.lofter.com/
+      rel: nofollow
+    - name: 友链
+      icon: fas fa-link
+      url: friends/
       rel: nofollow
     - name: 关于
       icon: fas fa-info-circle
@@ -293,7 +296,7 @@ valine:
 
 # 搜索配置
 search:
-  enable: true
+  enable: false
   service: hexo
   # google
   google_api_key:
