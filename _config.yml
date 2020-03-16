@@ -67,15 +67,15 @@ cover:
     - name: 博文
       icon: fas fa-home
       url: /
+    - name: 主页
+      icon: fas fa-rss
+      url: http://www.yangtao.site/vuepress
     - name: 分类
       icon: fas fa-folder-open
       url: categories/
     - name: 归档
       icon: fas fa-archive
       url: archives/
-    - name: Vuepress
-      icon: fas fa-rss
-      url: ./vuepress/
     # - name: 项目
     #   icon: fas fa-code-branch
     #   url: projects/
