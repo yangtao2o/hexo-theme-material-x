@@ -153,9 +153,9 @@
   h6 {
     position: relative;
     font-family: @fontfamily_base;
-    font-weight: normal;
+    // font-weight: normal;
     margin-top: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: .8em;
     &.title {
       left: 0;
       &:before {
@@ -164,8 +164,8 @@
     }
   }
   h1, h2 {
-    color: @color_text_header;
-    margin-top: 2em;
+    // color: @color_text_header;
+    margin-top: 1.8em;
   }
   h3, h4, h5, h6 {
     &:first-child{
@@ -254,15 +254,16 @@
   code {
     font-family: @fontfamily_code;
     margin: 0 2px;
-    padding: 0 5px;
+    padding: 2px 5px;
     vertical-align: center;
     border-radius: 4px;
+    color: @color_code_block;
     // border: 1px solid fade(@color_bg_code, 50%);
-    // font-size: @fontsize_base * .8;
+    font-size: @fontsize_base * .9;
     background: @color_bg_code;
-    // @media(max-width: @on_phone){
-    //   font-size: @fontsize_base * .8 * .95;
-    // }
+    @media(max-width: @on_phone){
+      font-size: @fontsize_base * .8 * .95;
+    }
   }
   .tags {
     position: relative;
@@ -399,7 +400,7 @@
   overflow: auto;
   display: block;
   background: @color_bg_code_block;
-  font-size: @fontsize_small * .95;
+  font-size: @fontsize_base;
   font-family:@fontfamily_code;
   line-height: @lineheight_base;
   border-radius: @border_radius_code_block;
